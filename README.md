@@ -1,14 +1,22 @@
-# metadataMerger
-A python script to merge JPG images with metadata contained in a json file
-This can be useful to merge metadata with photos fetched from Google takeout.
+# Creation Date Merger
+A simple python script to merge creation and last modification date of any type of file with the associated information contained in a json file.
+This can be useful to merge timestamp of photos and videos fetched with Google takeout, which, normally, split the multimedia file and its information in two different files.
 
 # INSTRUCTIONS
-By default, the script will look for JPG images and for JSON files in two directories respectively called "Images" and "Metadata", bothplaced in the same folder.
-Results (Photos containing metadata) will be placed in a folder called "Processed" (that will be automatically created if it does not exists)
+In the first rows of the script, you can edit the value of these three variables:
+-media_path: Path where multimedia files are placed
+-meta_path: Path where json files are placed (note that media_path and meta_path can assume the same value)
+-processed_path: Path where images with creation date updated will be saved. This path must be different from media_path.
 
-You can change this location of input images, metadata and output images by editing the variables "img_path", "meta_path" and "processed_path" in the firsts raws of the script.
-Variables "img_path" and "meta_path" can assume the same value, instead "img_path" and "processed path" must have different values.
+#File name
+"my.photo.jpg" creation date must be contained in file "my.photo.jpg.json"
 
-Launch the script and wait all the images to be merged with their metadata.
+#JSON Examples
+Minimum JSON file:
 
-IMPORTANT: This script works only with JPEG (".jpg" or ".jpeg") files. Any other type of file inside the input images folder will be ignored.
+{
+  "title": "myTitle.jpg",
+  "photoTakenTime": {
+    "timestamp": "1512663569"
+  }
+}
