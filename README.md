@@ -10,13 +10,3 @@ In the first rows of the script, you can edit the value of these three variables
 
 #File name
 "my.photo.jpg" creation date must be contained in file "my.photo.jpg.json"
-
-#JSON Examples
-Minimum JSON file:
-
-{
-  "title": "myTitle.jpg",
-  "photoTakenTime": {
-    "timestamp": "1512663569"
-  }
-}
