@@ -8,5 +8,4 @@ In the first rows of the script, you can edit the value of these three variables
 -meta_path: Path where json files are placed (note that media_path and meta_path can assume the same value)
 -processed_path: Path where images with creation date updated will be saved. This path must be different from media_path.
 
-#File name
 "my.photo.jpg" creation date must be contained in file "my.photo.jpg.json"
